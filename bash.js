@@ -14,3 +14,6 @@ exportFromLs();
 
 const exportFromCat = require('./cat');
 exportFromCat();
+
+const exportCurl = require('./curl');
+exportCurl();
