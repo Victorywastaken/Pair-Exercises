@@ -1,4 +1,4 @@
-module.exports = () => {
+module.exports = (done) => {
   const fs = require('fs');
   process.stdin.on('data', (data) => {
     /**
@@ -18,8 +18,7 @@ module.exports = () => {
         if(err){
           throw err;
         } else {
-          console.log(data);
-          process.stdout.write("\nprompt >");
+          done(data);
         }
       });
     }
