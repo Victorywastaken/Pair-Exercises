@@ -1,11 +1,13 @@
+// process.stdout.write('prompt > ');
+
+// process.stdin.on('data', (data) => {
+//   const cmd = data.toString().trim();
+// })
+
 process.stdout.write('prompt > ');
 
-process.stdin.on('data', (data) => {
-  const cmd = data.toString().trim();
+const exportFromPwd = require('./pwd');
+exportFromPwd();
 
-  if (cmd === 'pwd') {
-    process.stdout.write(process.cwd());
-  }
-  // process.stdout.write('You typed: ' + cmd);
-  // process.stdout.write('\nprompt > ');
-})
+const exportFromLs = require('./ls');
+exportFromLs();
