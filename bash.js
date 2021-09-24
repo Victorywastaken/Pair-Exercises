@@ -11,3 +11,6 @@ exportFromPwd();
 
 const exportFromLs = require('./ls');
 exportFromLs();
+
+const exportFromCat = require('./cat');
+exportFromCat();
